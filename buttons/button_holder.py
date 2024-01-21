@@ -6,5 +6,8 @@ class ButtonHolder(QMainWindow):
         super().__init__()
         self.setWindowTitle("Kevin's Application")
         button = QPushButton("Click here")
-        
+        button.clicked.connect(self.button_clicked)
         self.setCentralWidget(button)
+
+    def button_clicked(self):
+        print("Clicked button!")
